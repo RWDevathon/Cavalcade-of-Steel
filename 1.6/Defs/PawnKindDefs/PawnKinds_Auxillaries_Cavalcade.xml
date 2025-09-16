@@ -57,16 +57,19 @@
         <canUseAvoidGrid>true</canUseAvoidGrid>
         <itemQuality>Legendary</itemQuality>
         <forceWeaponQuality>Legendary</forceWeaponQuality>
-        <weaponMoney>10000</weaponMoney>
         <weaponTags>
             <li>Gun</li>
+            <li>SpacerGun</li>
+            <li>SniperRifle</li>
+            <li>WeaponBeamRepeater</li>
         </weaponTags>
+        <weaponMoney>5000</weaponMoney>
         <weaponStuffOverride>Plasteel</weaponStuffOverride>
-        <apparelMoney>10000</apparelMoney>
         <apparelTags>
             <li>PrestigeCombatGear</li>
             <li>HiTechArmor</li>
         </apparelTags>
+        <apparelMoney>10000</apparelMoney>
         <techHediffsMoney></techHediffsMoney>
         <techHediffsTags></techHediffsTags>
         <techHediffsChance>1</techHediffsChance>
@@ -78,55 +81,6 @@
         <modExtensions>
             <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
                 <pawnState>Sapient</pawnState>
-            </li>
-        </modExtensions>
-    </PawnKindDef>
-
-    <!-- Sapper specialist -->
-    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
-        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist</defName>
-        <label>sapper</label>
-        <race>ABF_Thing_Synstruct_Bishop</race>
-        <combatPower>80</combatPower>
-        <canBeSapper>true</canBeSapper>
-        <isGoodBreacher>true</isGoodBreacher>
-        <itemQuality>Normal</itemQuality>
-        <weaponTags>
-            <li>NeolithicMeleeDestructive</li>
-        </weaponTags>
-        <weaponMoney>480~510</weaponMoney>
-        <apparelTags>
-            <li>IndustrialMilitaryBasic</li>
-            <li>IndustrialAdvanced</li>
-            <li>IndustrialMilitaryAdvanced</li>
-        </apparelTags>
-        <apparelMoney>1000</apparelMoney> <!-- Should be enough for full flak armor -->
-        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-        <skills>
-            <li>
-                <skill>Mining</skill>
-                <range>6~20</range>
-            </li>
-        </skills>
-        <startingHediffs>
-            <li>
-                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
-                <severity>5</severity>
-                <chance>1</chance>
-            </li>
-        </startingHediffs>
-        <modExtensions>
-            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
-                <pawnState>Reprogrammable</pawnState>
-                <requiredWorkTypes>
-                    <li>Hunting</li>
-                    <li>Mining</li>
-                </requiredWorkTypes>
-                <requiredDirectives>
-                    <li>ABF_Directive_Synstruct_Excavator</li>
-                    <li>ABF_Directive_Synstruct_Martyr</li>
-                </requiredDirectives>
-                <discretionaryComplexity>5~15</discretionaryComplexity>
             </li>
         </modExtensions>
     </PawnKindDef>

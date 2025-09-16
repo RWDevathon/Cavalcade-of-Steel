@@ -107,6 +107,24 @@
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>3</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Commoner_Bombardier>3</ABF_PawnKind_Synstruct_Cavalcade_Commoner_Bombardier>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Headhunter>1</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Headhunter>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Gunner>1</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Gunner>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>2.5</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li>
+                <!-- Higher ranks, standard mix -->
+                <kindDef>Combat</kindDef>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>7.5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>7.5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>3</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Commoner_Bombardier>5</ABF_PawnKind_Synstruct_Cavalcade_Commoner_Bombardier>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Headhunter>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Headhunter>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Gunner>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Gunner>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>
                     <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>2.5</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
                 </options>
             </li>
@@ -114,11 +132,17 @@
                 <!-- Breach-capable assault, oriented for close combat -->
                 <kindDef>Combat</kindDef>
                 <commonality>20</commonality>
+                <disallowedStrategies>
+                    <li>StageThenAttack</li>
+                    <li>Siege</li>
+                </disallowedStrategies>
                 <options>
                     <ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist>
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
                     <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>2</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>
                 </options>
             </li>
             <li>
@@ -134,6 +158,22 @@
                 </disallowedStrategies>
                 <options>
                     <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>10</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li>
+                <!-- Trenchbreaker assault, rare, will only ever charge -->
+                <kindDef>Combat</kindDef>
+                <commonality>5</commonality>
+                <disallowedStrategies>
+                    <li>StageThenAttack</li>
+                    <li>ImmediateAttackFriendly</li> <!-- You do not want trenchbreakers showing up as allies -->
+                    <li>ImmediateAttackBreaching</li>
+                    <li>ImmediateAttackBreachingSmart</li>
+                    <li>ImmediateAttackSappers</li>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>10</ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker>
                 </options>
             </li>
             <li>

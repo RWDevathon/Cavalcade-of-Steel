@@ -102,11 +102,14 @@
         <modExtensions>
             <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
                 <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Construction</li>
+                </requiredWorkTypes>
                 <requiredDirectives>
                     <li>ABF_Directive_Synstruct_Martyr</li>
                     <li>ABF_Directive_Synstruct_Sharpshooter</li>
                 </requiredDirectives>
-                <discretionaryComplexity>15~24</discretionaryComplexity>
+                <discretionaryComplexity>15~20</discretionaryComplexity>
             </li>
         </modExtensions>
     </PawnKindDef>
@@ -141,6 +144,12 @@
         <race>ABF_Thing_Synstruct_Warrior</race>
         <combatPower>120</combatPower>
         <itemQuality>Normal</itemQuality>
+        <skills>
+            <li>
+                <skill>Construction</skill>
+                <range>4~8</range>
+            </li>
+        </skills>
         <weaponTags>
             <li>MedievalMeleeDecent</li>
             <li>MedievalMeleeAdvanced</li>
@@ -158,11 +167,148 @@
         <modExtensions>
             <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
                 <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Construction</li>
+                </requiredWorkTypes>
                 <requiredDirectives>
                     <li>ABF_Directive_Synstruct_Martyr</li>
                     <li>ABF_Directive_Synstruct_Brawler</li>
                 </requiredDirectives>
-                <discretionaryComplexity>15~24</discretionaryComplexity>
+                <discretionaryComplexity>15~20</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- Bishops -->
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_Headhunter</defName>
+        <label>headhunter</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>150</combatPower>
+        <itemQuality>Good</itemQuality>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>9~20</range>
+            </li>
+        </skills>
+        <weaponTags>
+            <li>SniperRifle</li>
+        </weaponTags>
+        <weaponMoney>700</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>10</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Chassis_Mobility</def>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                    <li>ABF_Directive_Synstruct_Sharpshooter</li>
+                </requiredDirectives>
+                <discretionaryDirectives>1~3</discretionaryDirectives>
+                <discretionaryComplexity>20~30</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_Gunner</defName>
+        <label>gunner</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>160</combatPower>
+        <itemQuality>Good</itemQuality>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>8~20</range>
+            </li>
+        </skills>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+            <li>Minigun</li>
+        </weaponTags>
+        <weaponMoney>1100~1200</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>10</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Frame_Plasteel</def>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                    <li>ABF_Directive_Synstruct_Veteran</li>
+                </requiredDirectives>
+                <discretionaryDirectives>1~3</discretionaryDirectives>
+                <discretionaryComplexity>20~30</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_Trenchbreaker</defName>
+        <label>trenchbreaker</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>200</combatPower>
+        <itemQuality>Good</itemQuality>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>8~20</range>
+            </li>
+        </skills>
+        <weaponTags>
+            <li>LongSword</li>
+        </weaponTags>
+        <weaponMoney>1200~1300</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>10</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Chassis_Mobility</def>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Frame_Plasteel</def>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                    <li>ABF_Directive_Synstruct_Brawler</li>
+                    <li>ABF_Directive_Synstruct_Berserker</li>
+                </requiredDirectives>
+                <discretionaryWorkTypes>0</discretionaryWorkTypes>
+                <discretionaryComplexity>20~30</discretionaryComplexity>
             </li>
         </modExtensions>
     </PawnKindDef>

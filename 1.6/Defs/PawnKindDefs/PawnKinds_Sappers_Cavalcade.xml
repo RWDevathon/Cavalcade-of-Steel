@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Sapper specialist -->
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist</defName>
+        <label>sapper</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>80</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <isGoodBreacher>true</isGoodBreacher>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>NeolithicMeleeDestructive</li>
+        </weaponTags>
+        <weaponMoney>480~510</weaponMoney>
+        <apparelTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <apparelMoney>1000</apparelMoney> <!-- Should be enough for full flak armor -->
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <skills>
+            <li>
+                <skill>Mining</skill>
+                <range>6~20</range>
+            </li>
+        </skills>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Hunting</li>
+                    <li>Mining</li>
+                </requiredWorkTypes>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Excavator</li>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>5~15</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- Explosives Experts -->
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_Grenadier</defName>
+        <label>grenadier</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>100</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+            <li>GrenadeTox</li>
+        </weaponTags>
+        <weaponMoney>320</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryDirectives>0~2</discretionaryDirectives>
+                <discretionaryComplexity>15~24</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Commoner_Bombardier</defName>
+        <label>bombardier</label>
+        <race>ABF_Thing_Synstruct_Commoner</race>
+        <combatPower>160</combatPower>
+        <itemQuality>Good</itemQuality>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>6~20</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>6~20</range>
+            </li>
+            <li> <!-- Sieges -->
+                <skill>Construction</skill>
+                <range>5~8</range>
+            </li>
+        </skills>
+        <weaponTags>
+            <li>GrenadeSmoke</li>
+            <li>HeavyTox</li>
+            <li>GunSingleUse</li>
+        </weaponTags>
+        <weaponMoney>1000~1200</weaponMoney>
+        <apparelTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <apparelMoney>1300</apparelMoney>
+        <apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Frame_Plasteel</def>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_Chassis_Guardian</def>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <techHediffsRequired>
+            <li>ABF_Thing_Synstruct_Utility_PacificationArm</li>
+            <li>ABF_Thing_Synstruct_Utility_PacificationArm</li>
+        </techHediffsRequired>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Hunting</li>
+                    <li>Construction</li>
+                </requiredWorkTypes>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryDirectives>0~2</discretionaryDirectives>
+                <discretionaryComplexity>15~18</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+</Defs>
