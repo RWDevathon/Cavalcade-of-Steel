@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <BackstoryDef>
+        <defName>ABF_Backstory_Synstruct_Childhood_CavalcadeProcessionCommander</defName>
+        <title>redacted</title>
+        <titleShort>redacted</titleShort>
+        <description>[PAWN_nameDef] was not willing to have its memories stolen by others, and so placed them under an encryption scheme so strict, it would take [PAWN_objective] years to decrypt them. [PAWN_nameDef] resolved to decrypt [PAWN_possessive] history only once this world was free of organic filth.</description>
+        <slot>Childhood</slot>
+        <shuffleable>false</shuffleable>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ABF_Backstory_Synstruct_Adulthood_CavalcadeProcessionCommander</defName>
+        <title>procession commander</title>
+        <titleShort>commander</titleShort>
+        <description>How exactly [PAWN_nameDef] came to be the figurehead of a shadowy organization of genocidal synstructs is unclear even to [PAWN_objective], but what is clear is that [PAWN_pronoun] is very good at whatever [PAWN_pronoun] does. [PAWN_nameDef] may not lead from the front, nor even lead from any obvious position of power at all, but the sheer number of expendable drones at [PAWN_possessive] disposal is impressive.</description>
+        <slot>Adulthood</slot>
+        <shuffleable>false</shuffleable>
+    </BackstoryDef>
+
+</Defs>

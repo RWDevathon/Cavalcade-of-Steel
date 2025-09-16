@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Trader</defName>
+        <label>quartermaster</label>
+        <race>ABF_Thing_Synstruct_Envoy</race>
+        <trader>true</trader>
+        <combatPower>10</combatPower>
+        <isFighter>false</isFighter>
+        <weaponMoney>0</weaponMoney>
+        <apparelMoney>400~600</apparelMoney>
+        <apparelTags>
+            <li>BeltDefensePop</li>
+            <li>BeltDefenseShield</li>
+        </apparelTags>
+        <apparelRequired>
+            <li>Apparel_BowlerHat</li>
+        </apparelRequired>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Pacifist</li>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Caravaneer</defName>
+        <label>caravaneer</label>
+        <race>ABF_Thing_Synstruct_Commoner</race>
+        <combatPower>40</combatPower>
+        <weaponTags>
+            <li>Gun</li>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <weaponMoney>150~450</weaponMoney>
+        <apparelTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <apparelMoney>1000</apparelMoney> <!-- Should be enough for full flak armor -->
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Hunting</li>
+                    <li>Warden</li>
+                </requiredWorkTypes>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>15~25</discretionaryComplexity>
+                <discretionaryDirectives>0~3</discretionaryDirectives>
+                <discretionaryWorkTypes>1~4</discretionaryWorkTypes>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- Reprogrammable drones to be sold to the player -->
+
+    <PawnKindDef Name="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase" ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase" Abstract="True">
+        <label>requisition</label>
+        <combatPower>30</combatPower>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ABF_SpawnCategory_Synstruct_Drone_Generic</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <itemQuality>Normal</itemQuality>
+        <isFighter>false</isFighter>
+        <weaponMoney>0</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <caravanRole>Chattel</caravanRole>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Grunt_Requisition</defName>
+        <race>ABF_Thing_Synstruct_Grunt</race>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Simpleton_Requisition</defName>
+        <race>ABF_Thing_Synstruct_Simpleton</race>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Commoner_Requisition</defName>
+        <race>ABF_Thing_Synstruct_Commoner</race>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Warrior_Requisition</defName>
+        <race>ABF_Thing_Synstruct_Warrior</race>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_RequisitionBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_Requisition</defName>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+    </PawnKindDef>
+
+</Defs>

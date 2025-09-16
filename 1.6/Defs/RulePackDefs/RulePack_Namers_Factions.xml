@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <RulePackDef>
+        <defName>ABF_RulePack_Synstruct_CavalcadeFactionNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[metal] [faction_noun]</li>
+                <li>r_name->[faction_noun] of [metal]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>metal->Words/Nouns/CavalcadeMetals</li>
+                <li>faction_noun->Words/Nouns/CavalcadeFactionNouns</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>ABF_RulePack_Synstruct_CavalcadeSettlementNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[townname_near]</li>
+
+                <li>townname_near->[TerrainFeature]'s [military_installation]</li>
+                <li>townname_near->[military_installation] holding the [TerrainFeature]</li>
+                <li>townname_near->[military_installation] overlooking the [TerrainFeature]</li>
+                <li>townname_near->[military_installation] at the [TerrainFeature]</li>
+                <li>townname_near->[military_installation] by the [TerrainFeature]</li>
+                <li>townname_near->[military_installation] on the [TerrainFeature]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>military_installation->Words/Nouns/MilitaryInstallations</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>ABF_RulePack_Synstruct_CavalcadeProcessionCommanderNamer</defName>
+        <include>
+            <li>EmpireNameUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->Redacted 'Ardent Dawn' Redacted</li>
+                <li>r_leaderTitle->Procession Commander</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

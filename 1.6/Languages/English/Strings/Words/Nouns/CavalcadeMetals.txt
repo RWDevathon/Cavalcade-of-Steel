@@ -1,0 +1,11 @@
+steel
+plasteel
+uranium
+silver
+gold
+jade
+
+// Metals not in the base game but which can be decent names
+bronze
+titanium
+tungsten

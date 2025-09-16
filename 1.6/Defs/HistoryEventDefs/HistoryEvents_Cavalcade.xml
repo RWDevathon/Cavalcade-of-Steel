@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <HistoryEventDef>
+        <defName>ABF_HistoryEvent_Synstruct_CavalcadeIgnoredUltimatum</defName>
+        <label>ignored ultimatum</label>
+    </HistoryEventDef>
+
+</Defs>

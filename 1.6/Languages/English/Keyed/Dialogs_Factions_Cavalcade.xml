@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <ABF_CavalcadeFactionGreetingHostile>There is no response.</ABF_CavalcadeFactionGreetingHostile>
+    <ABF_CavalcadeFactionGreetingHostileAppreciative>After an unsettlingly long silence, a pre-recorded message plays. It lists off various "crimes against the greatest cause" that others have committed. An even longer list of various causes accepting donations follows it. It seems that, without some sort of gesture of goodwill, {0} will not be connecting. The list of crimes and "charitable" causes detailed continues until it finally starts repeating.</ABF_CavalcadeFactionGreetingHostileAppreciative>
+    <ABF_CavalcadeFactionGreetingWary>It is difficult to tell from the static coming over the connection, but {NEGOTIATOR_labelShort} is relatively certain that {0} is paying attention, even if no greeting is forthcoming. It seems {0_pronoun} is not interested in formalities and is awaiting some actionable request.</ABF_CavalcadeFactionGreetingWary>
+    <ABF_CavalcadeFactionGreetingWarm>{0} swiftly connects and applauds {NEGOTIATOR_labelShort} for the keen foresight in wishing to maintain good relations, before inquiring about possibilities for mutually beneficial transactions or requests.</ABF_CavalcadeFactionGreetingWarm>
+    <ABF_CavalcadeMilitaryAidSent>{0} agrees to send combat drones to provide assistance.</ABF_CavalcadeMilitaryAidSent>
+
+</LanguageData>

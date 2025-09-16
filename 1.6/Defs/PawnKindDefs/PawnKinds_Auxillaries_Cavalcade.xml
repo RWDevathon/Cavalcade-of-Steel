@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AnimalBase">
+		<defName>ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout</defName>
+		<label>scout watchdog</label>
+        <race>ABF_Thing_Synstruct_Guardstruct</race>
+        <combatPower>70</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<defaultFactionType>ABF_Faction_Synstruct_Cavalcade</defaultFactionType>
+		<ecoSystemWeight>0.7</ecoSystemWeight>
+        <forceDeathOnDowned>true</forceDeathOnDowned>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawns/Animals/Guardstruct/Guardstruct</texPath>
+					<drawSize>2</drawSize>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawns/Animals/Guardstruct/Guardstruct</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+    <!-- The faction needs a faction leader, but this one should almost never actually spawn. -->
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_ProcessionCommander</defName>
+        <label>procession commander</label>
+        <race>ABF_Thing_Synstruct_Socialite</race>
+        <combatPower>300</combatPower>
+        <forcedTraits>
+            <ABF_Trait_Synstruct_BiologicalPreference>-1</ABF_Trait_Synstruct_BiologicalPreference>
+            <Bloodlust />
+            <Psychopath />
+        </forcedTraits>
+        <nameMaker>ABF_RulePack_Synstruct_CavalcadeProcessionCommanderNamer</nameMaker>
+        <fixedChildBackstories>
+            <li>ABF_Backstory_Synstruct_Childhood_CavalcadeProcessionCommander</li>
+        </fixedChildBackstories>
+        <fixedAdultBackstories>
+            <li>ABF_Backstory_Synstruct_Adulthood_CavalcadeProcessionCommander</li>
+        </fixedAdultBackstories>
+        <factionHostileOnKill>true</factionHostileOnKill>
+        <initialWillRange>150~200</initialWillRange>
+        <initialResistanceRange>150~200</initialResistanceRange>
+        <maxPerGroup>1</maxPerGroup>
+        <canBeScattered>false</canBeScattered>
+        <appearsRandomlyInCombatGroups>false</appearsRandomlyInCombatGroups>
+        <fleeHealthThresholdRange>0.5~0.9</fleeHealthThresholdRange>
+        <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
+        <canUseAvoidGrid>true</canUseAvoidGrid>
+        <itemQuality>Legendary</itemQuality>
+        <forceWeaponQuality>Legendary</forceWeaponQuality>
+        <weaponMoney>10000</weaponMoney>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponStuffOverride>Plasteel</weaponStuffOverride>
+        <apparelMoney>10000</apparelMoney>
+        <apparelTags>
+            <li>PrestigeCombatGear</li>
+            <li>HiTechArmor</li>
+        </apparelTags>
+        <techHediffsMoney></techHediffsMoney>
+        <techHediffsTags></techHediffsTags>
+        <techHediffsChance>1</techHediffsChance>
+        <techHediffsMaxAmount>20</techHediffsMaxAmount>
+        <biocodeWeaponChance>1</biocodeWeaponChance>
+        <minApparelQuality>Masterwork</minApparelQuality>
+        <maxApparelQuality>Legendary</maxApparelQuality>
+        <extraSkillLevels>8</extraSkillLevels>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Sapient</pawnState>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- Sapper specialist -->
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist</defName>
+        <label>sapper</label>
+        <race>ABF_Thing_Synstruct_Bishop</race>
+        <combatPower>80</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <isGoodBreacher>true</isGoodBreacher>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>NeolithicMeleeDestructive</li>
+        </weaponTags>
+        <weaponMoney>480~510</weaponMoney>
+        <apparelTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <apparelMoney>1000</apparelMoney> <!-- Should be enough for full flak armor -->
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <skills>
+            <li>
+                <skill>Mining</skill>
+                <range>6~20</range>
+            </li>
+        </skills>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Hunting</li>
+                    <li>Mining</li>
+                </requiredWorkTypes>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Excavator</li>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>5~15</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+</Defs>

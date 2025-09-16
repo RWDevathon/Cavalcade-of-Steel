@@ -1,0 +1,12 @@
+fort
+fortress
+bastion
+keep
+station
+camp
+stronghold
+rampart
+citadel
+outpost
+garrison
+staging ground

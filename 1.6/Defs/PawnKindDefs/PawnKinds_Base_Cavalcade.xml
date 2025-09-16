@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <PawnKindDef Name="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase" Abstract="True">
+        <label>synstruct marcher</label>
+        <defaultFactionType>ABF_Faction_Synstruct_Cavalcade</defaultFactionType>
+		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
+        <isFighter>true</isFighter>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ABF_SpawnCategory_Synstruct_Drone_Generic</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <!-- Cavalcade units you encounter should always have minimal energy consumption and maximized thermal protection. -->
+        <!-- Starting hediffs only apply when the pawn is generated, but this isn't a problem as drones don't get saved to the world EVER and Cavalcade does not use sapients. -->
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_StasisPill</def>
+                <severity>2</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_ThermalPill</def>
+                <severity>2</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+    </PawnKindDef>
+
+	<PawnKindDef Name="ABF_PawnKind_Synstruct_Cavalcade_AnimalBase" ParentName="ABF_PawnKind_Synstruct_AnimalBase" Abstract="True">
+        <startingHediffs>
+            <!-- Cavalcade units you encounter should always have minimal energy consumption and maximized thermal protection. -->
+            <!-- Starting hediffs only apply when the pawn is generated, but this isn't a problem as drones don't get saved to the world EVER and Cavalcade does not use sapients. -->
+            <li>
+                <def>ABF_Hediff_Synstruct_StasisPill</def>
+                <severity>2</severity>
+                <chance>1</chance>
+            </li>
+            <li>
+                <def>ABF_Hediff_Synstruct_ThermalPill</def>
+                <severity>2</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+	</PawnKindDef>
+
+</Defs>

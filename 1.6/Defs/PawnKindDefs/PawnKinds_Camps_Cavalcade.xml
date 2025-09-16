@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_MineralExtractor</defName>
+        <label>miner</label>
+        <race>ABF_Thing_Synstruct_Grunt</race>
+        <combatPower>20</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <isFighter>false</isFighter>
+        <weaponMoney>0</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <!-- Include the same thing twice as it should have two mining arms. -->
+        <techHediffsRequired>
+            <li>ABF_Thing_Synstruct_Utility_MiningArm</li>
+            <li>ABF_Thing_Synstruct_Utility_MiningArm</li>
+        </techHediffsRequired>
+        <initialWillRange>1~2</initialWillRange>
+        <initialResistanceRange>10~17</initialResistanceRange>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredWorkTypes>
+                    <li>Mining</li>
+                </requiredWorkTypes>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Excavator</li>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>15~20</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+</Defs>

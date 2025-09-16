@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TraderKindDef>
+        <defName>ABF_TraderKind_Synstruct_Cavalcade_Visitor</defName>
+        <label>trader</label>
+        <faction>ABF_Faction_Synstruct_Cavalcade</faction>
+        <stockGenerators>
+
+            <!-- Resources -->
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Silver</thingDef>
+                <countRange>50~250</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>ComponentIndustrial</thingDef>
+                <countRange>-2~5</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>ABF_Thing_Synstruct_RepairStim</thingDef>
+                <countRange>1~6</countRange>
+            </li>
+            <li Class="StockGenerator_ReinforcedBarrels">
+                <countRange>0~2</countRange>
+            </li>
+
+            <!-- Stimulators -->
+            <li Class="StockGenerator_Category">
+                <categoryDef>ABF_ThingCategory_Synstruct_Stimulators</categoryDef>
+                <thingDefCountRange>0~1</thingDefCountRange>
+                <totalPriceRange>100~300</totalPriceRange>
+            </li>
+
+            <!-- Techprints -->
+            <li Class="StockGenerator_Techprints">
+                <countChances>
+                <li>
+                    <count>1</count>
+                    <chance>0.25</chance>
+                </li>
+                </countChances>
+            </li>
+
+            <!-- Books -->
+            <!-- none -->
+
+            <!-- Weapons -->
+            <li Class="StockGenerator_MarketValue">
+                <tradeTag>WeaponRanged</tradeTag>
+                <countRange>0~1</countRange>
+            </li>
+
+            <!-- Apparel -->
+            <!-- None -->
+
+            <!-- Implants -->
+            <!-- none -->
+
+            <!-- Buildings -->
+            <!-- none -->
+
+            <!-- Exotic -->
+            <!-- none -->
+
+            <!-- Slaves -->
+            <!-- none -->
+
+            <!-- Animals -->
+            <!-- none -->
+
+            <!-- Buying -->
+            <li Class="StockGenerator_BuyExpensiveSimple" />
+        </stockGenerators>
+    </TraderKindDef>
+
+</Defs>

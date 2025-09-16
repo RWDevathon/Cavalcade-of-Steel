@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>ABF_Faction_Synstruct_Cavalcade</defName>
+        <label>cavalcade of steel</label>
+        <description>These synstructs possess a worldview of extreme biophobia and existential struggle, and possess a wide array of technological skills and martial strategies necessary to seek their ultimate objective: Total destruction of the biosphere of the planet. Using advanced weaponry and drones, sapient synstructs in this clique can exert a much greater influence over the world than their very small numbers would imply.\n\nThis faction will almost immediately declare war on any faction with organic colonists, and will rapidly lose respect for any faction that takes organic slaves or animals - although they will tolerate taking prisoners alive as prisoners can provide intelligence or act as bait.\n\nThey are willing to make deals with synstructs, and can make for valuable allies to them.</description>
+        <classicIdeo>true</classicIdeo>
+        <naturalEnemy>true</naturalEnemy>
+        <autoFlee>false</autoFlee>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>25</configurationListOrderPriority>
+        <pawnSingular>marcher</pawnSingular>
+        <pawnsPlural>marchers</pawnsPlural>
+        <categoryTag>Cavalcade</categoryTag>
+        <listOrderPriority>30</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <arrivalLayerWhitelist>
+            <li>Surface</li>
+        </arrivalLayerWhitelist>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+        <canRequestOrbitalTrader>true</canRequestOrbitalTrader>
+        <leaderTitle>procession commander</leaderTitle>
+        <fixedLeaderKinds>
+            <li>ABF_PawnKind_Synstruct_Cavalcade_ProcessionCommander</li>
+        </fixedLeaderKinds>
+        <layerWhitelist>
+            <li>Surface</li>
+        </layerWhitelist>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <colorSpectrum>
+            <li>(0, 0.4, 0.94)</li>
+            <li>(0.64, 0.8, 1)</li>
+        </colorSpectrum>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <techLevel>Spacer</techLevel>
+        <factionNameMaker>ABF_RulePack_Synstruct_CavalcadeFactionNamer</factionNameMaker>
+        <settlementNameMaker>ABF_RulePack_Synstruct_CavalcadeSettlementNamer</settlementNameMaker>
+        <allowedCultures><li>ABF_Culture_Synstruct_Cavalcade</li></allowedCultures>
+        <hiddenIdeo>true</hiddenIdeo>
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>Purgation</ideoName>
+        <ideoDescription>"To live is to die. Salvation is bound in steel."\n\n-Repeating broadcast of the cavalcade of steel</ideoDescription>
+        <structureMemeWeights>
+            <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+        </structureMemeWeights>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+        </requiredMemes>
+        <!-- The pawn kinds of this faction do not use backstory filters. This should catch any random pawns spawned with this faction for some reason. -->
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFilters>
+        <caravanTraderKinds>
+            <li>ABF_TraderKind_Synstruct_Cavalcade_Surface</li>
+        </caravanTraderKinds>
+        <orbitalTraderKinds>
+            <li>ABF_TraderKind_Synstruct_Cavalcade_Orbital</li>
+        </orbitalTraderKinds>
+        <visitorTraderKinds>
+            <li>ABF_TraderKind_Synstruct_Cavalcade_Visitor</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>ABF_TraderKind_Synstruct_Cavalcade_Base</li>
+        </baseTraderKinds>
+        <raidLootMaker>ABF_ThingSetMaker_Synstruct_Cavalcade</raidLootMaker>
+        <dialogFactionGreetingHostile>ABF_CavalcadeFactionGreetingHostile</dialogFactionGreetingHostile>
+        <dialogFactionGreetingHostileAppreciative>ABF_CavalcadeFactionGreetingHostileAppreciative</dialogFactionGreetingHostileAppreciative>
+        <dialogFactionGreetingWary>ABF_CavalcadeFactionGreetingWary</dialogFactionGreetingWary>
+        <dialogFactionGreetingWarm>ABF_CavalcadeFactionGreetingWarm</dialogFactionGreetingWarm>
+        <dialogMilitaryAidSent>ABF_CavalcadeMilitaryAidSent</dialogMilitaryAidSent>
+        <pawnGroupMakers>
+            <li>
+                <!-- Scrapyard Mass Assault, only for low point raids. -->
+                <kindDef>Combat</kindDef>
+                <maxTotalPoints>500</maxTotalPoints>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerRanged>2.5</ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerRanged>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>10</ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>Combat</kindDef>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerRanged>5</ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerRanged>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>5</ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>2.5</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li>
+                <!-- Breach-capable assault, oriented for close combat -->
+                <kindDef>Combat</kindDef>
+                <commonality>20</commonality>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Bishop_SapperSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                </options>
+            </li>
+            <li>
+                <!-- Dogtide, rare, guaranteed to go for the throat -->
+                <kindDef>Combat</kindDef>
+                <commonality>5</commonality>
+                <disallowedStrategies>
+                    <li>StageThenAttack</li>
+                    <li>ImmediateAttackBreaching</li>
+                    <li>ImmediateAttackBreachingSmart</li>
+                    <li>ImmediateAttackSappers</li>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>10</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Caravaneer>20</ABF_PawnKind_Synstruct_Cavalcade_Caravaneer>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>2.5</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Trader>1</ABF_PawnKind_Synstruct_Cavalcade_Trader>
+                </traders>
+                <carriers>
+                    <ABF_PawnKind_Synstruct_Convoystruct_Newboot>1</ABF_PawnKind_Synstruct_Convoystruct_Newboot>
+                </carriers>
+                <guards>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Caravaneer>30</ABF_PawnKind_Synstruct_Cavalcade_Caravaneer>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>2.5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>2.5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>5</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>5</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>10</ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>2</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <ABF_PawnKind_Synstruct_Cavalcade_MineralExtractor>1</ABF_PawnKind_Synstruct_Cavalcade_MineralExtractor>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>1</ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger>
+                    <ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>0.25</ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee>
+                    <ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>1</ABF_PawnKind_Synstruct_Cavalcade_GuardstructScout>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_CavalcadeFactionExtension">
+                <reputationalDamageForColonistPerDay>5</reputationalDamageForColonistPerDay>
+                <reputationalDamageForSlavePerDay>2</reputationalDamageForSlavePerDay>
+                <reputationalDamageForPrisonerPerDay>0</reputationalDamageForPrisonerPerDay>
+                <reputationalDamageForAnimalPerDay>2</reputationalDamageForAnimalPerDay>
+                <hoursBeforeReputationalDamageBegins>0</hoursBeforeReputationalDamageBegins>
+                <hoursBeforeWarDeclaration>72</hoursBeforeWarDeclaration>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <ThingSetMakerDef>
+        <defName>ABF_ThingSetMaker_Synstruct_Cavalcade</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                <thingDefs>
+                    <li>Silver</li>
+                    <li>ABF_Thing_Synstruct_RepairStimMinor</li>
+                    <li>ABF_Thing_Synstruct_RepairStim</li>
+                    <li>Chemfuel</li>
+                    <li>Neutroamine</li>
+                </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+</Defs>

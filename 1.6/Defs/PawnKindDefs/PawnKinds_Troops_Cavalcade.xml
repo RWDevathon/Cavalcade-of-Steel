@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Simpletons -->
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerRanged</defName>
+        <label>swarm ranger</label>
+        <race>ABF_Thing_Synstruct_Simpleton</race>
+        <combatPower>40</combatPower>
+        <aiAvoidCover>true</aiAvoidCover>
+        <itemQuality>Awful</itemQuality>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponMoney>140~140</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <gearHealthRange>0.25~0.75</gearHealthRange>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>0~4</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Simpleton_SwarmerMelee</defName>
+        <label>swarm mauler</label>
+        <race>ABF_Thing_Synstruct_Simpleton</race>
+        <combatPower>40</combatPower>
+        <itemQuality>Awful</itemQuality>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <weaponMoney>100~145</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <gearHealthRange>0.25~0.75</gearHealthRange>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>0~4</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+
+    <!-- Warriors -->
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Warrior_Ranger</defName>
+        <label>ranger</label>
+        <race>ABF_Thing_Synstruct_Warrior</race>
+        <combatPower>80</combatPower>
+        <aiAvoidCover>true</aiAvoidCover>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponMoney>150~300</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>5~10</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Warrior_RangerSpecialist</defName>
+        <label>ranger specialist</label>
+        <race>ABF_Thing_Synstruct_Warrior</race>
+        <combatPower>120</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponMoney>250~530</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                    <li>ABF_Directive_Synstruct_Sharpshooter</li>
+                </requiredDirectives>
+                <discretionaryComplexity>15~24</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Warrior_Mauler</defName>
+        <label>mauler</label>
+        <race>ABF_Thing_Synstruct_Warrior</race>
+        <combatPower>80</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <weaponMoney>150~250</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                </requiredDirectives>
+                <discretionaryComplexity>5~10</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ABF_PawnKind_Synstruct_Cavalcade_AbstractBase">
+        <defName>ABF_PawnKind_Synstruct_Cavalcade_Warrior_MaulerSpecialist</defName>
+        <label>mauler specialist</label>
+        <race>ABF_Thing_Synstruct_Warrior</race>
+        <combatPower>120</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <weaponMoney>260~545</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <startingHediffs>
+            <li>
+                <def>ABF_Hediff_Synstruct_EnhancedComplexity</def>
+                <severity>5</severity>
+                <chance>1</chance>
+            </li>
+        </startingHediffs>
+        <modExtensions>
+            <li Class="ArtificialBeings.ABF_ArtificialPawnKindExtension">
+                <pawnState>Reprogrammable</pawnState>
+                <requiredDirectives>
+                    <li>ABF_Directive_Synstruct_Martyr</li>
+                    <li>ABF_Directive_Synstruct_Brawler</li>
+                </requiredDirectives>
+                <discretionaryComplexity>15~24</discretionaryComplexity>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+</Defs>

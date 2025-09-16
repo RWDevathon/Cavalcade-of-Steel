@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ABF_CavalcadeUltimatum>Ultimatum</ABF_CavalcadeUltimatum>
+    <ABF_CavalcadeUltimatumDesc>A communique condemning your "protection of organic filth" has been received, alongside an ominous warning to cleanse yourself of it, or else in {0} hours you will be judged. It seems {1} is aware of the organics in your faction, and is none too pleased.\n\nRelations will drop every day until the organics are removed. If you are not allied with {1}, they will declare war on you after the ultimatum expires.</ABF_CavalcadeUltimatumDesc>
+
+    <ABF_CavalcadeDeclarationOfWar>Declaration of War</ABF_CavalcadeDeclarationOfWar>
+    <ABF_CavalcadeDeclarationOfWarDesc>A communique across all frequencies has been received: "By protecting organic filth, you have chosen death." It isn't addressed to anyone, but judging by the dry, robotic tone and the fact that this is exactly when the ultimatum from {0} was set to expire, there can only be one conclusion: This is a declaration of war against you by {0}. They might reconsider their stance if all organics were to disappear.</ABF_CavalcadeDeclarationOfWarDesc>
+
+</Defs>
