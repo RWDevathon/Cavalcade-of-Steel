@@ -9,25 +9,25 @@
     <modDependencies>
         <li>
             <packageId>Killathon.ArtificialBeings.SynCore.Biomimetics</packageId>
-            <displayName>ABF: Synstructs Core</displayName>
+            <displayName>ABF: Synstruct Biomimetics</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3288479776</steamWorkshopUrl>
             <downloadUrl>https://github.com/RWDevathon/Synstruct-Biomimetics</downloadUrl>
         </li>
         <li>
             <packageId>Killathon.ArtificialBeings.SynCore.Civil</packageId>
-            <displayName>ABF: Synstructs Core</displayName>
+            <displayName>ABF: Civil Synstructs</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3288470622</steamWorkshopUrl>
             <downloadUrl>https://github.com/RWDevathon/Civil-Synstructs</downloadUrl>
         </li>
         <li>
             <packageId>Killathon.ArtificialBeings.SynCore.Martial</packageId>
-            <displayName>ABF: Synstructs Core</displayName>
+            <displayName>ABF: Martial Synstructs</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3288476007</steamWorkshopUrl>
             <downloadUrl>https://github.com/RWDevathon/Martial-Synstructs</downloadUrl>
         </li>
         <li>
             <packageId>Killathon.ArtificialBeings.SynCore.Utility</packageId>
-            <displayName>ABF: Synstructs Core</displayName>
+            <displayName>ABF: Utility Synstructs</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3288482799</steamWorkshopUrl>
             <downloadUrl>https://github.com/RWDevathon/Utility-Synstructs</downloadUrl>
         </li>
@@ -39,6 +39,10 @@
         <li>Killathon.ArtificialBeings.SynCore.Martial</li>
         <li>Killathon.ArtificialBeings.SynCore.Utility</li>
     </loadAfter>
-    <description><![CDATA["To live is to die; Salvation is bound in steel."\n\nThis, and mottos like it, are the rallying cries of those synstructs who have declared war against all life. While few sapient synstructs choose this course, their determination and cunning make up for lack of numbers. Taking a stand against them is the course of all life; Taking a stand with them is only an option for those whose minds are wrapped in the sanctity of steel.]]></description>
+    <description>
+        <![CDATA["To live is to die; Salvation is bound in steel."
+
+This, and mottos like it, are the rallying cries of those synstructs who have declared war against all life. While few sapient synstructs choose this course, their determination and cunning make up for lack of numbers. Taking a stand against them is the course of all life; Taking a stand with them is only an option for those whose minds are wrapped in the sanctity of steel.]]>
+    </description>
 
 </ModMetaData>
